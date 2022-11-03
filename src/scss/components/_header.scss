@@ -1,0 +1,21 @@
+@use "../variables";
+@use "../mixins";
+
+.header {
+  background-color: variables.$primary-color;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 1.5rem;
+
+  h1 {
+    color: variables.$white;
+  }
+}

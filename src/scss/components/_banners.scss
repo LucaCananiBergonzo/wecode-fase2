@@ -1,0 +1,32 @@
+@use "../variables";
+@use "../mixins";
+
+.container-banners {
+  width: 100%;
+
+  #banner1 {
+    @include mixins.bg-img("Banner-home-corpo-1.png");
+  }
+
+  #banner2 {
+    @include mixins.bg-img("Banner-home-corpo-2.png");
+  }
+
+  .banner {
+    height: 320px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      color: variables.$white;
+      padding: 1rem;
+      text-decoration: underline;
+      font-size: 22px;
+    }
+  }
+}

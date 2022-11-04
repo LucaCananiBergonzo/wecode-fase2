@@ -45,6 +45,7 @@ a {
 }
 .apresentacao-swiper .swiperApresentacao {
   width: 100%;
+  height: 560px;
 }
 .apresentacao-swiper .swiperApresentacao .swiper-slide img {
   width: 100%;
@@ -155,6 +156,31 @@ a {
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .sem-lancamento {
   display: flex;
   justify-content: flex-end;
+}
+
+.container-banners {
+  width: 100%;
+}
+.container-banners #banner1 {
+  background-image: url("/dist/assets/images/Banner-home-corpo-1.png");
+}
+.container-banners #banner2 {
+  background-image: url("/dist/assets/images/Banner-home-corpo-2.png");
+}
+.container-banners .banner {
+  height: 320px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.container-banners .banner a {
+  color: #ffffff;
+  padding: 1rem;
+  text-decoration: underline;
+  font-size: 22px;
 }
 
 /*# sourceMappingURL=style.css.map */

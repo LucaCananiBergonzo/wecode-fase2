@@ -2,12 +2,22 @@
 @use "../mixins";
 
 .apresentacao-swiper {
-  margin-top: 4rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  @media ($mobile) {
+    margin-top: 4rem;
+  }
 
   .swiperApresentacao {
-    width: 100%;
-    height: 560px;
+    width: 50%;
+    max-height: 560px;
+    width: 75%;
+
+    @media ($mobile) {
+      width: 100%;
+    }
 
     .swiper-slide {
       img {

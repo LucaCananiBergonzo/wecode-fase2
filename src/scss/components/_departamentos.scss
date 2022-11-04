@@ -2,6 +2,7 @@
 @use "../mixins";
 
 .container-departamentos {
+  padding: 1rem;
   margin-top: 1rem;
   .departamentos {
     display: flex;
@@ -10,45 +11,46 @@
     flex-wrap: wrap;
 
     #departamento1 {
-      @include mixins.bg-img("Banner-home-departamento-1.png");
+      @include bg-img("Banner-home-departamento-1.png");
     }
-
     #departamento2 {
-      @include mixins.bg-img("Banner-home-departamento-2.png");
+      @include bg-img("Banner-home-departamento-2.png");
     }
-
     #departamento3 {
-      @include mixins.bg-img("Banner-home-departamento-3.png");
+      @include bg-img("Banner-home-departamento-3.png");
     }
-
     #departamento4 {
-      @include mixins.bg-img("Banner-home-departamento-4.png");
+      @include bg-img("Banner-home-departamento-4.png");
     }
-
     #departamento5 {
-      @include mixins.bg-img("Banner-home-departamento-5.png");
+      @include bg-img("Banner-home-departamento-5.png");
     }
-
     #departamento6 {
-      @include mixins.bg-img("Banner-home-departamento-6.png");
+      @include bg-img("Banner-home-departamento-6.png");
     }
 
     .card-departamento {
-      @include mixins.flex;
+      @include flex;
       background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
-      height: 160px;
-      width: 160px;
+      height: 200px;
+      width: 200px;
       margin: 1rem 0.5rem;
       transition: all 0.5s;
 
+      @media ($mobile-sm) {
+        height: 160px;
+        width: 160px;
+        margin: 0.7rem 0.2rem;
+      }
+
       &:hover {
-        background-size: 115%;
+        background-size: 120%;
       }
 
       h2 {
-        color: variables.$white;
+        color: $white;
         font-weight: 250;
       }
     }

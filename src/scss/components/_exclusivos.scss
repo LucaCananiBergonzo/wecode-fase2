@@ -1,18 +1,19 @@
 @use "../variables";
 @use "../mixins";
 
-.container-mais-vendidos {
+.container-exclusivos {
   padding: 1.5rem;
   @media ($mobile-sm) {
     padding: 0;
   }
+  margin-top: 2rem;
   overflow: hidden;
-  .mais-vendidos {
+  .exclusivos {
     h1 {
       padding: 0.5rem 0.8rem 0.2rem;
       font-size: 20px;
     }
-    .swiperMaisVendidos {
+    .swiperExclusivos {
       width: 100%;
       height: 100%;
       padding: 1.5rem;
@@ -70,24 +71,6 @@
           .sem-lancamento {
             display: flex;
             justify-content: flex-end;
-          }
-        }
-      }
-
-      .swiper-pagination {
-        bottom: 0;
-
-        &-bullet {
-          background-color: $black;
-          transition: 0.2s linear;
-
-          width: 12px;
-          height: 12px;
-
-          &-active {
-            background-color: $secondary-color;
-            border: 1px solid $black;
-            transform: scale(1.3);
           }
         }
       }

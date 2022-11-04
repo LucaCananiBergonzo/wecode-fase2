@@ -1,20 +1,22 @@
 @use "../variables";
 @use "../mixins";
 
-.container-header {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: variables.$primary-color;
-  height: 4rem;
+  background-color: $primary-color;
+  height: 6rem;
   z-index: 100;
+  padding: 3rem;
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  @media ($mobile-sm) {
+    height: 4rem;
     padding: 1rem;
   }
 }

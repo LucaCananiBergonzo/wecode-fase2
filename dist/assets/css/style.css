@@ -23,35 +23,58 @@ a {
   text-decoration: none;
 }
 
-.container-header {
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: #232323;
-  height: 4rem;
+  height: 6rem;
   z-index: 100;
+  padding: 3rem;
 }
-.container-header .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+@media (max-width: 480px) {
+  .header {
+    height: 4rem;
+    padding: 1rem;
+  }
 }
 
 .apresentacao-swiper {
-  margin-top: 4rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .apresentacao-swiper {
+    margin-top: 4rem;
+  }
 }
 .apresentacao-swiper .swiperApresentacao {
-  width: 100%;
-  height: 560px;
+  width: 50%;
+  max-height: 560px;
+  width: 75%;
+}
+@media (max-width: 768px) {
+  .apresentacao-swiper .swiperApresentacao {
+    width: 100%;
+  }
 }
 .apresentacao-swiper .swiperApresentacao .swiper-slide img {
   width: 100%;
 }
 
 .container-departamentos {
+  padding: 1rem;
   margin-top: 1rem;
 }
 .container-departamentos .departamentos {
@@ -85,13 +108,20 @@ a {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 160px;
-  width: 160px;
+  height: 200px;
+  width: 200px;
   margin: 1rem 0.5rem;
   transition: all 0.5s;
 }
+@media (max-width: 480px) {
+  .container-departamentos .departamentos .card-departamento {
+    height: 160px;
+    width: 160px;
+    margin: 0.7rem 0.2rem;
+  }
+}
 .container-departamentos .departamentos .card-departamento:hover {
-  background-size: 115%;
+  background-size: 120%;
 }
 .container-departamentos .departamentos .card-departamento h2 {
   color: #ffffff;
@@ -99,7 +129,13 @@ a {
 }
 
 .container-mais-vendidos {
+  padding: 1.5rem;
   overflow: hidden;
+}
+@media (max-width: 480px) {
+  .container-mais-vendidos {
+    padding: 0;
+  }
 }
 .container-mais-vendidos .mais-vendidos h1 {
   padding: 0.5rem 0.8rem 0.2rem;
@@ -161,16 +197,26 @@ a {
   justify-content: flex-end;
 }
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-pagination {
-  bottom: 2px;
+  bottom: 0;
 }
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-pagination-bullet {
   background-color: #000000;
   transition: 0.2s linear;
+  width: 12px;
+  height: 12px;
 }
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-pagination-bullet-active {
   background-color: #eeff49;
   border: 1px solid #000000;
-  transform: scale(1.2);
+  transform: scale(1.3);
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-button-prev,
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-button-next {
+  color: #333333;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-button-prev::after,
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-button-next::after {
+  font-size: 4rem;
 }
 
 .container-banners {
@@ -183,7 +229,8 @@ a {
   background-image: url("/dist/assets/images/Banner-home-corpo-2.png");
 }
 .container-banners .banner {
-  height: 320px;
+  height: 300px;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -196,6 +243,154 @@ a {
   padding: 1rem;
   text-decoration: underline;
   font-size: 22px;
+}
+
+.container-selecionados {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .container-selecionados {
+    padding: 0;
+  }
+}
+.container-selecionados .selecionados h1 {
+  padding: 0.5rem 0.8rem 0.2rem;
+  font-size: 20px;
+}
+.container-selecionados .selecionados .swiperSelecionados {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide #slide1 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-1.png");
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide #slide2 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-3.png");
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide #slide3 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-2.png");
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe {
+  height: 400px;
+  width: 270px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe .infos-cafe {
+  display: flex;
+  flex-direction: column;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe .infos-cafe div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe .infos-cafe div a {
+  text-decoration: line-through;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe .infos-cafe div span {
+  color: #eeff49;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe .lancamento {
+  display: flex;
+  justify-content: space-between;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe .lancamento p {
+  background-color: #eeff49;
+  padding: 3px;
+}
+.container-selecionados .selecionados .swiperSelecionados .swiper-slide .card-cafe .sem-lancamento {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-exclusivos {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+@media (max-width: 480px) {
+  .container-exclusivos {
+    padding: 0;
+  }
+}
+.container-exclusivos .exclusivos h1 {
+  padding: 0.5rem 0.8rem 0.2rem;
+  font-size: 20px;
+}
+.container-exclusivos .exclusivos .swiperExclusivos {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide #slide1 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-1.png");
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide #slide2 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-3.png");
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide #slide3 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-2.png");
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe {
+  height: 400px;
+  width: 270px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe .infos-cafe {
+  display: flex;
+  flex-direction: column;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe .infos-cafe div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe .infos-cafe div a {
+  text-decoration: line-through;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe .infos-cafe div span {
+  color: #eeff49;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe .lancamento {
+  display: flex;
+  justify-content: space-between;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe .lancamento p {
+  background-color: #eeff49;
+  padding: 3px;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-slide .card-cafe .sem-lancamento {
+  display: flex;
+  justify-content: flex-end;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-button-prev,
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-button-next {
+  color: #333333;
+}
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-button-prev::after,
+.container-exclusivos .exclusivos .swiperExclusivos .swiper-button-next::after {
+  font-size: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

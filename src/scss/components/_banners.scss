@@ -5,15 +5,16 @@
   width: 100%;
 
   #banner1 {
-    @include mixins.bg-img("Banner-home-corpo-1.png");
+    @include bg-img("Banner-home-corpo-1.png");
   }
 
   #banner2 {
-    @include mixins.bg-img("Banner-home-corpo-2.png");
+    @include bg-img("Banner-home-corpo-2.png");
   }
 
   .banner {
-    height: 320px;
+    height: 300px;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -23,7 +24,7 @@
     justify-content: flex-end;
 
     a {
-      color: variables.$white;
+      color: $white;
       padding: 1rem;
       text-decoration: underline;
       font-size: 22px;

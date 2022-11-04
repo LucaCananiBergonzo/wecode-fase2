@@ -1,9 +1,9 @@
-@use "resets";
-@use "variables";
-@use "mixins";
+@import "resets";
+@import "variables";
+@import "mixins";
 
-@use "components/header";
-@use "components/apresentacao";
-@use "components/departamentos";
-@use "components/maisVendidos";
-@use "components/banners";
+@import "components/header";
+@import "components/apresentacao";
+@import "components/departamentos";
+@import "components/maisVendidos";
+@import "components/banners";

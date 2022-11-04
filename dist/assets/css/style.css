@@ -106,11 +106,13 @@ a {
   font-size: 20px;
 }
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos {
-  width: 75%;
+  width: 100%;
+  height: 100%;
   padding: 1.5rem;
 }
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide {
-  margin-right: 0.8rem;
+  display: flex;
+  justify-content: center;
 }
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide #slide1 {
   background-image: url("/dist/assets/images/Imagem-home-produto-1.png");
@@ -123,6 +125,7 @@ a {
 }
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe {
   height: 400px;
+  width: 270px;
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -156,6 +159,18 @@ a {
 .container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .sem-lancamento {
   display: flex;
   justify-content: flex-end;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-pagination {
+  bottom: 2px;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-pagination-bullet {
+  background-color: #000000;
+  transition: 0.2s linear;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-pagination-bullet-active {
+  background-color: #eeff49;
+  border: 1px solid #000000;
+  transform: scale(1.2);
 }
 
 .container-banners {

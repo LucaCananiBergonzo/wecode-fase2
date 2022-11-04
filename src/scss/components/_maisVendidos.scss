@@ -1,0 +1,70 @@
+@use "../variables";
+@use "../mixins";
+
+.container-mais-vendidos {
+  overflow: hidden;
+  .mais-vendidos {
+    h1 {
+      padding: 0.5rem 0.8rem 0.2rem;
+      font-size: 20px;
+    }
+    .swiperMaisVendidos {
+      width: 75%;
+      padding: 1.5rem;
+
+      .swiper-slide {
+        margin-right: 0.8rem;
+        #slide1 {
+          @include mixins.bg-img("Imagem-home-produto-1.png");
+        }
+        #slide2 {
+          @include mixins.bg-img("Imagem-home-produto-3.png");
+        }
+        #slide3 {
+          @include mixins.bg-img("Imagem-home-produto-2.png");
+        }
+
+        .card-cafe {
+          height: 400px;
+          padding: 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+
+          .infos-cafe {
+            display: flex;
+            flex-direction: column;
+
+            div {
+              @include mixins.flex;
+              justify-content: space-between;
+              color: variables.$white;
+
+              a {
+                text-decoration: line-through;
+              }
+              span {
+                color: variables.$secondary-color;
+              }
+            }
+          }
+
+          .lancamento {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+              background-color: variables.$secondary-color;
+              padding: 3px;
+            }
+          }
+
+          .sem-lancamento {
+            display: flex;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}

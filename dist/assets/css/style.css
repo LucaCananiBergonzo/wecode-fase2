@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
+  font-family: "SF Pro";
+  font-weight: 200;
 }
 
 body {
@@ -21,19 +23,138 @@ a {
   text-decoration: none;
 }
 
-.header {
-  background-color: #333333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  background-color: #232323;
+  height: 4rem;
+  z-index: 100;
+}
+.container-header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.apresentacao-swiper {
+  margin-top: 4rem;
+  overflow: hidden;
+}
+.apresentacao-swiper .swiperApresentacao {
+  width: 100%;
+}
+.apresentacao-swiper .swiperApresentacao .swiper-slide img {
+  width: 100%;
+}
+
+.container-departamentos {
+  margin-top: 1rem;
+}
+.container-departamentos .departamentos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container-departamentos .departamentos #departamento1 {
+  background-image: url("/dist/assets/images/Banner-home-departamento-1.png");
+}
+.container-departamentos .departamentos #departamento2 {
+  background-image: url("/dist/assets/images/Banner-home-departamento-2.png");
+}
+.container-departamentos .departamentos #departamento3 {
+  background-image: url("/dist/assets/images/Banner-home-departamento-3.png");
+}
+.container-departamentos .departamentos #departamento4 {
+  background-image: url("/dist/assets/images/Banner-home-departamento-4.png");
+}
+.container-departamentos .departamentos #departamento5 {
+  background-image: url("/dist/assets/images/Banner-home-departamento-5.png");
+}
+.container-departamentos .departamentos #departamento6 {
+  background-image: url("/dist/assets/images/Banner-home-departamento-6.png");
+}
+.container-departamentos .departamentos .card-departamento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 160px;
+  width: 160px;
+  margin: 1rem 0.5rem;
+  transition: all 0.5s;
+}
+.container-departamentos .departamentos .card-departamento:hover {
+  background-size: 115%;
+}
+.container-departamentos .departamentos .card-departamento h2 {
+  color: #ffffff;
+  font-weight: 250;
+}
+
+.container-mais-vendidos {
+  overflow: hidden;
+}
+.container-mais-vendidos .mais-vendidos h1 {
+  padding: 0.5rem 0.8rem 0.2rem;
+  font-size: 20px;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos {
+  width: 75%;
   padding: 1.5rem;
 }
-.header h1 {
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide {
+  margin-right: 0.8rem;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide #slide1 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-1.png");
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide #slide2 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-3.png");
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide #slide3 {
+  background-image: url("/dist/assets/images/Imagem-home-produto-2.png");
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe {
+  height: 400px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .infos-cafe {
+  display: flex;
+  flex-direction: column;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .infos-cafe div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   color: #ffffff;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .infos-cafe div a {
+  text-decoration: line-through;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .infos-cafe div span {
+  color: #eeff49;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .lancamento {
+  display: flex;
+  justify-content: space-between;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .lancamento p {
+  background-color: #eeff49;
+  padding: 3px;
+}
+.container-mais-vendidos .mais-vendidos .swiperMaisVendidos .swiper-slide .card-cafe .sem-lancamento {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

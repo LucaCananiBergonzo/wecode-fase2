@@ -1,0 +1,17 @@
+@use "../variables";
+@use "../mixins";
+
+.apresentacao-swiper {
+  margin-top: 4rem;
+  overflow: hidden;
+
+  .swiperApresentacao {
+    width: 100%;
+
+    .swiper-slide {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

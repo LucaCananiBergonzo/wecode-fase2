@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +12,154 @@
     <title>Wecode</title>
   </head>
   <body>
-    <section>
+    <section class="container-header">
       <header class="header">
-        <img src="../dist/assets/svgs/icon-header-menu.svg" />
-        <img src="../dist/assets/svgs/logo-header-wecode.svg" />
+        <img
+          src="../dist/assets/svgs/icon-header-menu.svg"
+          alt="Botão do menu"
+        />
+        <img
+          src="../dist/assets/svgs/logo-header-wecode.svg"
+          alt="Logo da Wecode"
+        />
         <div>
-          <img src="../dist/assets/svgs/icon-header-search.svg" alt="" />
-          <img src="../dist/assets/svgs/icon-header-carrinho.svg" alt="" />
+          <img
+            src="../dist/assets/svgs/icon-header-search.svg"
+            alt="Botão para pesquisar"
+          />
+          <img
+            src="../dist/assets/svgs/icon-header-carrinho.svg"
+            alt="Botão que leva ao carinho"
+          />
         </div>
       </header>
     </section>
+    <section class="apresentacao-swiper">
+      <div class="swiperApresentacao">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="../dist/assets/images/Banner-home-principal-1.png"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../dist/assets/images/Banner-home-principal-2.png"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="../dist/assets/images/Banner-home-principal-3.png"
+              alt=""
+            />
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <section class="container-departamentos">
+      <aside class="departamentos">
+        <div class="card-departamento" id="departamento1">
+          <h2>Departamento 1</h2>
+        </div>
+        <div class="card-departamento" id="departamento2">
+          <h2>Departamento 2</h2>
+        </div>
+        <div class="card-departamento" id="departamento3">
+          <h2>Departamento 3</h2>
+        </div>
+        <div class="card-departamento" id="departamento4">
+          <h2>Departamento 4</h2>
+        </div>
+        <div class="card-departamento" id="departamento5">
+          <h2>Departamento 5</h2>
+        </div>
+        <div class="card-departamento" id="departamento6">
+          <h2>Departamento 6</h2>
+        </div>
+      </aside>
+    </section>
+    <section class="container-mais-vendidos">
+      <main class="mais-vendidos">
+        <h1>Produtos mais vendidos</h1>
+        <div class="swiperMaisVendidos">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-mais-vendidos" id="slide1">
+                <div class="card-cafe">
+                  <div class="infos-cafe">
+                    <div>
+                      <p>Copo de Mocaccino</p>
+                      <a>R$ 12</a>
+                    </div>
+                    <div>
+                      <p>Médio - 550 ml</p>
+                      <span>R$ 9,50</span>
+                    </div>
+                  </div>
+                  <div class="lancamento">
+                    <p>Lançamento</p>
+                    <img
+                      src="../dist/assets/svgs/icon-home-carddeproduto-addtocart.svg"
+                      alt="Icone de adicionar produto ao carrinho"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-mais-vendidos" id="slide2">
+                <div class="card-cafe">
+                  <div class="infos-cafe">
+                    <div>
+                      <p>Copo de Mocaccino</p>
+                      <a>R$ 16</a>
+                    </div>
+                    <div>
+                      <p>Grande - 750 ml</p>
+                      <span>R$ 12,50</span>
+                    </div>
+                  </div>
+                  <div class="sem-lancamento">
+                    <img
+                      src="../dist/assets/svgs/icon-home-carddeproduto-addtocart.svg"
+                      alt="Icone de adicionar produto ao carrinho"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-mais-vendidos" id="slide3">
+                <div class="card-cafe">
+                  <div class="infos-cafe">
+                    <div>
+                      <p>Copo de Mocaccino</p>
+                      <a>R$ 9</a>
+                    </div>
+                    <div>
+                      <p>Pequeno - 350 ml</p>
+                      <span>R$ 6,50</span>
+                    </div>
+                  </div>
+                  <div class="sem-lancamento">
+                    <img
+                      src="../dist/assets/svgs/icon-home-carddeproduto-addtocart.svg"
+                      alt="Icone de adicionar produto ao carrinho"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../src/js/main.js"></script>
   </body>
 </html>

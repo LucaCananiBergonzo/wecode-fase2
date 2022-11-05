@@ -1,0 +1,41 @@
+.conteiner-pagamentos {
+  background-color: $background-financeiro;
+  overflow: hidden;
+
+  .slide-financeiro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 82px;
+
+    color: $text-color-financeiro;
+
+    .icon-and-text {
+      display: flex;
+
+      justify-content: space-between;
+      p {
+        padding-left: 5px;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 0;
+
+      &-bullet {
+        background-color: $black;
+        transition: 0.2s linear;
+
+        width: 12px;
+        height: 12px;
+
+        &-active {
+          background-color: $text-color-financeiro;
+          border: 1px solid $black;
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 const swiperApresentacao = new Swiper(".swiperApresentacao", {
   direction: "horizontal",
   loop: true,
-  effect: "fade",
-  autoplay: true
+  effect: "fade"
+  //autoplay: true
 });
 
 const swiperMaisVendidos = new Swiper(".swiperMaisVendidos", {
@@ -30,5 +30,12 @@ const swiperExclusivos = new Swiper(".swiperExclusivos", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
+  }
+});
+
+const swiperPagamentos = new Swiper(".swiperPagamentos", {
+  direction: "horizontal",
+  pagination: {
+    el: ".swiper-pagination"
   }
 });

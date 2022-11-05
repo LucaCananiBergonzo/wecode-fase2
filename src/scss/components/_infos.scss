@@ -1,0 +1,57 @@
+.container-infos {
+  background-color: $primary-color;
+  padding: 3rem 1rem 2rem;
+
+  color: $white;
+
+  .logo {
+    width: 180px;
+    height: 40px;
+
+    margin-bottom: 3rem;
+  }
+  a {
+    text-decoration: underline;
+    font-size: 24px;
+  }
+
+  .news {
+    margin-bottom: 2rem;
+
+    .title {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+    .mail {
+      display: flex;
+      justify-content: center;
+
+      input {
+        height: 40px;
+        margin-right: 8px;
+        max-width: 650px;
+        width: 100%;
+      }
+
+      button {
+        height: 40px;
+        min-width: 80px;
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  .social-midias {
+    margin-bottom: 2rem;
+
+    div {
+      margin-top: 1rem;
+      img {
+        padding: 8px 14px;
+      }
+    }
+  }
+}

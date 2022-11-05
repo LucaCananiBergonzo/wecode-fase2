@@ -21,9 +21,9 @@ Site responsivo de e-commerce
   ```sh
   $ git@github.com:LucaCananiBergonzo/wecode-fase2.git
   ```
-- Instale as dependências do package.json
+- Instale o sass
   ```sh
-  $ npm install
+  $ npm install -g sass
   ```
 - Para observar o sass:
   ```sh

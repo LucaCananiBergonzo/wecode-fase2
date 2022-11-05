@@ -1,0 +1,151 @@
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 200;
+  width: 30%;
+
+  @media ($mobile) {
+    width: 50%;
+  }
+  @media ($mobile-sm) {
+    width: 70%;
+  }
+
+  background-color: $primary-color;
+  overflow: auto;
+
+  .close-container {
+    padding: 1rem;
+    img {
+      width: 25px;
+      height: 25px;
+      background-color: $closeBtn;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  }
+
+  .welcome {
+    padding: 1rem;
+
+    .retangules {
+      .retangule1 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+
+        background: $rectangle;
+        border-radius: 10px;
+      }
+      .retangule2 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+
+        border: 1px solid $secondary-color;
+        border-radius: 10px;
+        transform: rotate(-17deg);
+      }
+    }
+
+    .welcome-text {
+      position: absolute;
+      left: 100px;
+      top: 83px;
+      p {
+        font-size: 20px;
+        color: $white;
+      }
+      span {
+        font-size: 24px;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .accordions {
+    position: absolute;
+    top: 180px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    #departamento1 {
+      background-color: #343434;
+    }
+    #departamento2 {
+      background-color: #464646;
+    }
+    #departamento3 {
+      background-color: #5a5a5a;
+    }
+    #departamento4 {
+      background-color: #7c7c7c;
+    }
+    #departamento5 {
+      background-color: #aeaeae;
+    }
+    #departamento6 {
+      background-color: #d2d2d2;
+    }
+
+    .accordion {
+      padding: 1rem;
+
+      .accordion-tittle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-size: 1.5rem;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .accordion-item {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: $black;
+          font-size: 1rem;
+          padding: 0.5rem;
+        }
+      }
+
+      &.active {
+        color: $black;
+        background-color: $secondary-color !important;
+        .accordion-item {
+          max-height: 300px;
+        }
+      }
+    }
+  }
+
+  .logout {
+    background-color: $white;
+    padding: 1rem;
+
+    p {
+      color: $closeBtn;
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &.menu-open {
+    display: block;
+  }
+}

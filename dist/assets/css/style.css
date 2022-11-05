@@ -567,4 +567,137 @@ a {
   justify-content: center;
 }
 
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  width: 30%;
+  background-color: #232323;
+  overflow: auto;
+}
+@media (max-width: 768px) {
+  .menu {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .menu {
+    width: 70%;
+  }
+}
+.menu .close-container {
+  padding: 1rem;
+}
+.menu .close-container img {
+  width: 25px;
+  height: 25px;
+  background-color: #878787;
+  padding: 8px;
+  border-radius: 5px;
+}
+.menu .welcome {
+  padding: 1rem;
+}
+.menu .welcome .retangules .retangule1 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #b3b3b3;
+  border-radius: 10px;
+}
+.menu .welcome .retangules .retangule2 {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #eeff49;
+  border-radius: 10px;
+  transform: rotate(-17deg);
+}
+.menu .welcome .welcome-text {
+  position: absolute;
+  left: 100px;
+  top: 83px;
+}
+.menu .welcome .welcome-text p {
+  font-size: 20px;
+  color: #ffffff;
+}
+.menu .welcome .welcome-text span {
+  font-size: 24px;
+  color: #eeff49;
+}
+.menu .accordions {
+  position: absolute;
+  top: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.menu .accordions #departamento1 {
+  background-color: #343434;
+}
+.menu .accordions #departamento2 {
+  background-color: #464646;
+}
+.menu .accordions #departamento3 {
+  background-color: #5a5a5a;
+}
+.menu .accordions #departamento4 {
+  background-color: #7c7c7c;
+}
+.menu .accordions #departamento5 {
+  background-color: #aeaeae;
+}
+.menu .accordions #departamento6 {
+  background-color: #d2d2d2;
+}
+.menu .accordions .accordion {
+  padding: 1rem;
+}
+.menu .accordions .accordion .accordion-tittle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .accordions .accordion .accordion-tittle h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.menu .accordions .accordion .accordion-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+  display: flex;
+  flex-direction: column;
+}
+.menu .accordions .accordion .accordion-item p {
+  color: #000000;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.menu .accordions .accordion.active {
+  color: #000000;
+  background-color: #eeff49 !important;
+}
+.menu .accordions .accordion.active .accordion-item {
+  max-height: 300px;
+}
+.menu .logout {
+  background-color: #ffffff;
+  padding: 1rem;
+}
+.menu .logout p {
+  color: #878787;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.menu.menu-open {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */

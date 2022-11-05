@@ -441,38 +441,93 @@ a {
   text-decoration: underline;
   font-size: 24px;
 }
-.container-infos .news {
-  margin-bottom: 2rem;
-}
-.container-infos .news .title {
-  margin-bottom: 1rem;
-}
-.container-infos .news p {
-  margin-bottom: 1rem;
-}
-.container-infos .news .mail {
+.container-infos .responsive {
   display: flex;
-  justify-content: center;
 }
-.container-infos .news .mail input {
+@media (max-width: 768px) {
+  .container-infos .responsive {
+    display: block;
+  }
+}
+.container-infos .responsive .news {
+  margin-bottom: 2rem;
+  flex: 2;
+}
+.container-infos .responsive .news .title {
+  margin-bottom: 1rem;
+}
+.container-infos .responsive .news p {
+  margin-bottom: 1rem;
+}
+.container-infos .responsive .news .mail {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .container-infos .responsive .news .mail {
+    justify-content: center;
+  }
+}
+.container-infos .responsive .news .mail input {
   height: 40px;
   margin-right: 8px;
   max-width: 650px;
   width: 100%;
 }
-.container-infos .news .mail button {
+.container-infos .responsive .news .mail button {
   height: 40px;
   min-width: 80px;
   background-color: #eeff49;
 }
-.container-infos .social-midias {
+.container-infos .responsive .social-midias {
   margin-bottom: 2rem;
+  flex: 1;
 }
-.container-infos .social-midias div {
+.container-infos .responsive .social-midias div {
   margin-top: 1rem;
 }
-.container-infos .social-midias div img {
+.container-infos .responsive .social-midias div img {
   padding: 8px 14px;
+}
+.container-infos .accordions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+.container-infos .accordions .accordion {
+  padding: 1rem;
+}
+.container-infos .accordions .accordion .accordion-tittle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-infos .accordions .accordion .accordion-tittle h3 {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.container-infos .accordions .accordion .accordion-tittle svg {
+  transition: transform 1s ease;
+}
+.container-infos .accordions .accordion .accordion-item {
+  border-bottom: solid 1px #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease;
+  display: flex;
+  flex-direction: column;
+}
+.container-infos .accordions .accordion .accordion-item p {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.container-infos .accordions .accordion.active .accordion-item {
+  max-height: 300px;
+}
+.container-infos .accordions .accordion.active svg {
+  transform: rotate(180deg);
 }
 
 .footer .certificados {

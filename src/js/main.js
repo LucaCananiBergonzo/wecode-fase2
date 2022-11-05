@@ -39,3 +39,15 @@ const swiperPagamentos = new Swiper(".swiperPagamentos", {
     el: ".swiper-pagination"
   }
 });
+
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(accordion => {
+  accordion.addEventListener("click", () => {
+    if (accordion.classList.contains("active")) {
+      accordion.classList.remove("active");
+    } else {
+      accordion.classList.add("active");
+    }
+  });
+});

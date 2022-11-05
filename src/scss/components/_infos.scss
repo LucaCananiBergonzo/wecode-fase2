@@ -10,47 +10,111 @@
 
     margin-bottom: 3rem;
   }
+
   a {
     text-decoration: underline;
     font-size: 24px;
   }
 
-  .news {
-    margin-bottom: 2rem;
+  .responsive {
+    display: flex;
 
-    .title {
-      margin-bottom: 1rem;
+    @media ($mobile) {
+      display: block;
     }
 
-    p {
-      margin-bottom: 1rem;
-    }
-    .mail {
-      display: flex;
-      justify-content: center;
+    .news {
+      margin-bottom: 2rem;
+      flex: 2;
 
-      input {
-        height: 40px;
-        margin-right: 8px;
-        max-width: 650px;
-        width: 100%;
+      .title {
+        margin-bottom: 1rem;
       }
 
-      button {
-        height: 40px;
-        min-width: 80px;
-        background-color: $secondary-color;
+      p {
+        margin-bottom: 1rem;
+      }
+      .mail {
+        display: flex;
+        @media ($mobile) {
+          justify-content: center;
+        }
+
+        input {
+          height: 40px;
+          margin-right: 8px;
+          max-width: 650px;
+          width: 100%;
+        }
+
+        button {
+          height: 40px;
+          min-width: 80px;
+          background-color: $secondary-color;
+        }
+      }
+    }
+
+    .social-midias {
+      margin-bottom: 2rem;
+      flex: 1;
+
+      div {
+        margin-top: 1rem;
+        img {
+          padding: 8px 14px;
+        }
       }
     }
   }
 
-  .social-midias {
-    margin-bottom: 2rem;
+  .accordions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
 
-    div {
-      margin-top: 1rem;
-      img {
-        padding: 8px 14px;
+    .accordion {
+      padding: 1rem;
+
+      .accordion-tittle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-size: 1.5rem;
+          padding-bottom: 1rem;
+        }
+
+        svg {
+          transition: transform 1s ease;
+        }
+      }
+
+      .accordion-item {
+        border-bottom: solid 1px $white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: $white;
+          font-size: 1rem;
+          padding: 0.5rem;
+        }
+      }
+
+      &.active {
+        .accordion-item {
+          max-height: 300px;
+        }
+        svg {
+          transform: rotate(180deg);
+        }
       }
     }
   }

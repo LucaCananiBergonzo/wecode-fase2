@@ -24,13 +24,18 @@ const swiperSelecionados = new Swiper(".swiperSelecionados", {
   grabCursor: true
 });
 
-const swiperExclusivos = new Swiper(".swiperExclusivos", {
+const swiperExclusivosMobile = new Swiper(".swiperExclusivosMobile", {
   effect: "flip",
   grabCursor: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
   }
+});
+
+const swiperExclusivosDesktop = new Swiper(".swiperExclusivosDesktop", {
+  effect: "flip",
+  grabCursor: true
 });
 
 const swiperPagamentos = new Swiper(".swiperPagamentos", {

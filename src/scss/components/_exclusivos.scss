@@ -13,74 +13,163 @@
       padding: 0.5rem 0.8rem 0.2rem;
       font-size: 20px;
     }
-    .swiperExclusivos {
+
+    .swiperExclusivosMobile {
       width: 100%;
       height: 100%;
       padding: 1.5rem;
+      display: none;
 
-      .swiper-slide {
-        display: flex;
-        justify-content: center;
+      @media ($mobile) {
+        display: block;
 
-        #slide1 {
-          @include bg-img("Imagem-home-produto-1.png");
-        }
-        #slide2 {
-          @include bg-img("Imagem-home-produto-3.png");
-        }
-        #slide3 {
-          @include bg-img("Imagem-home-produto-2.png");
-        }
-
-        .card-cafe {
-          height: 400px;
-          width: 270px;
-          padding: 1.5rem;
+        .swiper-slide {
           display: flex;
-          justify-content: space-between;
-          flex-direction: column;
+          justify-content: center;
 
-          .infos-cafe {
-            display: flex;
-            flex-direction: column;
-
-            div {
-              @include flex;
-              justify-content: space-between;
-              color: $white;
-
-              a {
-                text-decoration: line-through;
-              }
-              span {
-                color: $secondary-color;
-              }
-            }
+          #slide1 {
+            @include bg-img("Imagem-home-produto-1.png");
+          }
+          #slide2 {
+            @include bg-img("Imagem-home-produto-3.png");
+          }
+          #slide3 {
+            @include bg-img("Imagem-home-produto-2.png");
           }
 
-          .lancamento {
+          .card-cafe {
+            height: 400px;
+            width: 270px;
+            padding: 1.5rem;
             display: flex;
             justify-content: space-between;
+            flex-direction: column;
 
-            p {
-              background-color: $secondary-color;
-              padding: 3px;
+            .infos-cafe {
+              display: flex;
+              flex-direction: column;
+
+              div {
+                @include flex;
+                justify-content: space-between;
+                color: $white;
+
+                a {
+                  text-decoration: line-through;
+                }
+                span {
+                  color: $secondary-color;
+                }
+              }
+            }
+
+            .lancamento {
+              display: flex;
+              justify-content: space-between;
+
+              p {
+                background-color: $secondary-color;
+                padding: 3px;
+              }
+            }
+
+            .sem-lancamento {
+              display: flex;
+              justify-content: flex-end;
             }
           }
+        }
 
-          .sem-lancamento {
-            display: flex;
-            justify-content: flex-end;
+        .swiper-button-prev,
+        .swiper-button-next {
+          color: $arrow-swiper;
+
+          &::after {
+            font-size: 4rem;
           }
         }
       }
+    }
 
-      .swiper-button-prev,
-      .swiper-button-next {
-        color: $arrow-swiper;
+    .responsive-desktop {
+      display: flex;
+      justify-content: space-around;
 
-        &::after {
-          font-size: 4rem;
+      .swiperExclusivosDesktop {
+        display: flex;
+        justify-content: space-between;
+        max-width: 270px;
+        margin-top: 1rem;
+
+        .swiper-slide {
+          display: flex;
+          justify-content: center;
+
+          .slide1 {
+            @include bg-img("Imagem-home-produto-1.png");
+          }
+          .slide2 {
+            @include bg-img("Imagem-home-produto-2.png");
+          }
+          .slide3 {
+            @include bg-img("Imagem-home-produto-3.png");
+          }
+
+          .card-cafe {
+            height: 400px;
+            width: 270px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .infos-cafe {
+              display: flex;
+              flex-direction: column;
+
+              div {
+                @include flex;
+                justify-content: space-between;
+                color: $white;
+
+                a {
+                  text-decoration: line-through;
+                }
+                span {
+                  color: $secondary-color;
+                }
+              }
+            }
+          }
+        }
+
+        .backslide {
+          .card-cafe {
+            height: 400px;
+            width: 270px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          button {
+            width: 90%;
+            height: 3rem;
+            background-color: $secondary-color;
+            transition: background-color 1.25s;
+          }
+
+          &:hover {
+            button {
+              background-color: transparent;
+              cursor: pointer;
+            }
+          }
+        }
+
+        @media ($mobile) {
+          display: none;
         }
       }
     }

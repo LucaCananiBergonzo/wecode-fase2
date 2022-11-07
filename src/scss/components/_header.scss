@@ -1,22 +1,53 @@
 @use "../variables";
 @use "../mixins";
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container-header {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: $primary-color;
-  height: 6rem;
-  z-index: 100;
-  padding: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $primary-color;
+    height: 6rem;
+    z-index: 100;
+    padding: 3rem;
 
-  @media ($mobile-sm) {
+    @media ($mobile-sm) {
+      height: 4rem;
+      padding: 1rem;
+    }
+  }
+
+  .searchInput {
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+    background-color: $primary-color;
     height: 4rem;
-    padding: 1rem;
+    transition: display 1s ease;
+
+    @media ($mobile-sm) {
+      top: 4rem;
+    }
+
+    input {
+      width: 90%;
+      height: 2.5rem;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    &.search-open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

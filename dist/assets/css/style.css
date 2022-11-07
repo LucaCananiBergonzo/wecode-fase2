@@ -29,7 +29,7 @@ a {
   background: none;
 }
 
-.header {
+.container-header .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,10 +43,37 @@ a {
   padding: 3rem;
 }
 @media (max-width: 480px) {
-  .header {
+  .container-header .header {
     height: 4rem;
     padding: 1rem;
   }
+}
+.container-header .searchInput {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  background-color: #232323;
+  height: 4rem;
+  transition: display 1s ease;
+}
+@media (max-width: 480px) {
+  .container-header .searchInput {
+    top: 4rem;
+  }
+}
+.container-header .searchInput input {
+  width: 90%;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.container-header .searchInput.search-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .apresentacao-swiper {
@@ -398,33 +425,36 @@ a {
   background-color: #dddddd;
   overflow: hidden;
 }
-.conteiner-pagamentos .slide-financeiro {
+.conteiner-pagamentos .swiperPagamentos {
+  position: relative;
+}
+.conteiner-pagamentos .swiperPagamentos .slide-financeiro {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 82px;
   color: #666666;
 }
-.conteiner-pagamentos .slide-financeiro .icon-and-text {
+.conteiner-pagamentos .swiperPagamentos .slide-financeiro .icon-and-text {
   display: flex;
   justify-content: space-between;
 }
-.conteiner-pagamentos .slide-financeiro .icon-and-text p {
+.conteiner-pagamentos .swiperPagamentos .slide-financeiro .icon-and-text p {
   padding-left: 5px;
 }
-.conteiner-pagamentos .slide-financeiro .swiper-pagination {
+.conteiner-pagamentos .swiperPagamentos .swiper-pagination {
   bottom: 0;
 }
-.conteiner-pagamentos .slide-financeiro .swiper-pagination-bullet {
+.conteiner-pagamentos .swiperPagamentos .swiper-pagination-bullet {
   background-color: #000000;
   transition: 0.2s linear;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
 }
-.conteiner-pagamentos .slide-financeiro .swiper-pagination-bullet-active {
+.conteiner-pagamentos .swiperPagamentos .swiper-pagination-bullet-active {
   background-color: #666666;
   border: 1px solid #000000;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .container-infos {
@@ -511,7 +541,6 @@ a {
   transition: transform 1s ease;
 }
 .container-infos .accordions .accordion .accordion-item {
-  border-bottom: solid 1px #ffffff;
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease;

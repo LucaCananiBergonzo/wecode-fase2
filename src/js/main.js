@@ -1,8 +1,8 @@
 const swiperApresentacao = new Swiper(".swiperApresentacao", {
   direction: "horizontal",
   loop: true,
-  effect: "fade"
-  //autoplay: true
+  effect: "fade",
+  autoplay: true
 });
 
 const swiperMaisVendidos = new Swiper(".swiperMaisVendidos", {
@@ -62,4 +62,15 @@ menuBtn.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
   menu.classList.remove("menu-open");
+});
+
+const searchBtn = document.querySelector(".search-btn");
+const searchInput = document.querySelector(".searchInput");
+
+searchBtn.addEventListener("click", () => {
+  if (searchInput.classList.contains("search-open")) {
+    searchInput.classList.remove("search-open");
+  } else {
+    searchInput.classList.add("search-open");
+  }
 });

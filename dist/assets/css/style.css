@@ -80,6 +80,7 @@ a {
   overflow: hidden;
   display: flex;
   justify-content: center;
+  margin-top: 6rem;
 }
 @media (max-width: 768px) {
   .apresentacao-swiper {
@@ -87,17 +88,60 @@ a {
   }
 }
 .apresentacao-swiper .swiperApresentacao {
-  width: 50%;
-  max-height: 560px;
-  width: 75%;
+  width: 100%;
+  max-height: 800px;
 }
 @media (max-width: 768px) {
   .apresentacao-swiper .swiperApresentacao {
-    width: 100%;
+    max-height: 560px;
   }
 }
-.apresentacao-swiper .swiperApresentacao .swiper-slide img {
-  width: 100%;
+.apresentacao-swiper .swiperApresentacao .swiper-slide {
+  min-height: 560px;
+}
+.apresentacao-swiper .swiperApresentacao .swiper-slide .banner-apresentacao {
+  height: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.apresentacao-swiper .swiperApresentacao .swiper-slide .banner-apresentacao a {
+  color: #ffffff;
+  padding: 1rem;
+  text-decoration: underline;
+  font-size: 28px;
+}
+@media (max-width: 768px) {
+  .apresentacao-swiper .swiperApresentacao .swiper-slide .banner-apresentacao a {
+    color: transparent;
+  }
+}
+.apresentacao-swiper .swiperApresentacao .swiper-slide #banner1 {
+  background-image: url("/dist/assets/images/wecode1.jpg");
+}
+@media (max-width: 768px) {
+  .apresentacao-swiper .swiperApresentacao .swiper-slide #banner1 {
+    background-image: url("/dist/assets/images/Banner-home-principal-1.png");
+  }
+}
+.apresentacao-swiper .swiperApresentacao .swiper-slide #banner2 {
+  background-image: url("/dist/assets/images/wecode2.jpg");
+}
+@media (max-width: 768px) {
+  .apresentacao-swiper .swiperApresentacao .swiper-slide #banner2 {
+    background-image: url("/dist/assets/images/Banner-home-principal-2.png");
+  }
+}
+.apresentacao-swiper .swiperApresentacao .swiper-slide #banner3 {
+  background-image: url("/dist/assets/images/wecode2.jpg");
+}
+@media (max-width: 768px) {
+  .apresentacao-swiper .swiperApresentacao .swiper-slide #banner3 {
+    background-image: url("/dist/assets/images/Banner-home-principal-3.png");
+  }
 }
 
 .container-departamentos {
